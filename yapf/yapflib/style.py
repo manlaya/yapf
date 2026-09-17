@@ -61,8 +61,8 @@ _STYLE_HELP = dict(
     # BASED_ON_STYLE='Which predefined style this style is based on',
     ALIGN_ASSIGNMENT=textwrap.dedent("""\
       Align assignment or augmented assignment operators.
-      If there is a blank line or newline comment or objects with newline entries in between,
-      it will start new block alignment. For exemple:
+      If there is a blank line or newline comment or objects with newline
+      entries in between, it will start new block alignment. For exemple:
 
         val_first = 1
         val_second += 2
@@ -73,7 +73,7 @@ _STYLE_HELP = dict(
           }
         val_third = 3
 
-      will be formatted as: 
+      will be formatted as:
 
         val_first   = 1
         val_second += 2
@@ -87,7 +87,7 @@ _STYLE_HELP = dict(
     ALIGN_ASSIGNMENT_RESTART_AFTER_COMMENTS=textwrap.dedent("""\
       Start new assignment alignment block when there is a newline comment in
       between. For example if this is off then:
-      
+
       val_first = 1
       val_second += 2
       # comment
@@ -101,7 +101,7 @@ _STYLE_HELP = dict(
       val_third   = 3
 
       and if it is on it will be formatted as:
-      
+
       val_first   = 1
       val_second += 2
       # comment

@@ -392,15 +392,15 @@ optional arguments:
 >    Allows to choose whether to align assignments before and after a comment
 >    line independently. For exemple, if off:
 
-```python  
+```python
   val_first      = 1
   val_second += 2
   # comment
   val_third    = 3
 ```
-  
+
 will be aligned as:
-```python      
+```python
   val_first   = 1
   val_second += 2
   # comment

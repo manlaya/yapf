@@ -318,8 +318,8 @@ def _AlignGeneric(final_lines, func_is_tok_to_align_current_line,
             break
 
           # Calculate the length of each line in this logical line.
-          pt_line_lengths, max_line_length, tmp = func_calculate_pre_token_line_lengths(
-              this_line, max_line_length)
+          pt_line_lengths, max_line_length, tmp = (
+              func_calculate_pre_token_line_lengths(this_line, max_line_length))
           stop_next_it = stop_next_it or tmp
 
           if pt_line_lengths:
@@ -446,7 +446,8 @@ def _AlignTrailingComments(final_lines):
 
 
 def _AlignAssignment(final_lines):
-  """Align assignment operators and augmented assignment operators to the same column"""
+  """Align assignment operators and augmented assignment operators to the same
+  column"""
 
   def _IsTokToAlign(tok):
     return tok.is_assign or tok.is_augassign
@@ -507,7 +508,8 @@ def _AlignAssignment(final_lines):
         if not contain_object:
           if line_tok.is_assign:
             pt_line_length.append(len(variables_content))
-          # if augassign, add the extra augmented part to the max length caculation
+          # if augassign, add the extra augmented part to the max length
+          # caculation
           elif line_tok.is_augassign:
             pt_line_length.append(
                 len(variables_content) + len(line_tok.value) - 1)

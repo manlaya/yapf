@@ -5,30 +5,30 @@
 ## (0.41.0) UNRELEASED
 ### Added
 - New `ALIGN_ASSIGNMENT` and `ALIGN_ASSIGNMENT_RESTART_AFTER_COMMENTS` flags.
- `ALIGN_ASSIGNMENT` is a new knob that enables alignment of assignment 
+ `ALIGN_ASSIGNMENT` is a new knob that enables alignment of assignment
  operators in consecutive lines.
 
- A blank line or multiline object (function, multiline dictionary, ...) will 
+ A blank line or multiline object (function, multiline dictionary, ...) will
  always interrupt the alignment block and start a new one. Comments can also
  optionally interrupt the block, a behaviour that can be turned on with
  `ALIGN_ASSIGNMENT_RESTART_AFTER_COMMENTS`.
 
  For example, with `ALIGN_ASSIGNMENT` off:
-  ```      
+  ```
   val_first      = 1
   val_second += 2
   # comment
   val_third    = 3
   ```
-  
+
   will be formatted as:
-  ```      
+  ```
   val_first = 1
   val_second += 2
   # comment
   val_third = 3
   ```
-  whereas with `ALIGN_ASSIGNMENT` on and 
+  whereas with `ALIGN_ASSIGNMENT` on and
   `ALIGN_ASSIGNMENT_RESTART_AFTER_COMMENTS` off we get:
   ```
   val_first   = 1
@@ -37,7 +37,7 @@
   val_third   = 3
   ```
   while if they are both on:
-  ```    
+  ```
   val_first   = 1
   val_second += 2
   # comment

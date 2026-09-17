@@ -3339,7 +3339,7 @@ xxxxxxxxxxx, yyyyyyyyyyyy, vvvvvvvvv)
     llines = yapf_test_helper.ParseAndUnwrap(unformatted_code)
     self.assertCodeEqual(expected, reformatter.Reformat(llines))
 
-  #------tests for alignment functions--------
+  # ------tests for alignment functions--------
   def testAlignAssignBlankLineInbetween(self):
     try:
       style.SetGlobalStyle(
@@ -3501,7 +3501,7 @@ xxxxxxxxxxx, yyyyyyyyyyyy, vvvvvvvvv)
           val_first = 1
           val_second += 2
         val_third = 3
-        val_fourth = 4                   
+        val_fourth = 4
       """)
       expected_formatted_code = textwrap.dedent("""\
         if True:
